@@ -1,0 +1,10 @@
+version: "3"
+services:
+  kafdrop:
+    image: 'obsidiandynamics/kafdrop'
+    ports:
+      - '9000:9000'
+    environment:
+      - KAFKA_BROKERCONNECT=192.168.1.235:9093
+      - JVM_OPTS=-Xms32M -Xmx64M
+      - SERVER_SERVLET_CONTEXTPATH=/
